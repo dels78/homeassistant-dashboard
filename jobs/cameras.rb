@@ -3,11 +3,11 @@ require 'net/http'
 @cameraDelay = 1 # Needed for image sync. 
 @fetchNewImageEvery = '10s'
 
-@camera1Host = "cctv_server"  ## CHANGE
-@camera1Port = "80"  ## CHANGE
+@camera1Host = "192.168.1.15"  ## CHANGE
+@camera1Port = "8765"  ## CHANGE
 @camera1Username = 'None' ## CHANGE
 @camera1Password = '' ## CHANGE
-@camera1URL = "/mobile/channel01.jpg"
+@camera1URL = "/picture/1/current/?_username=admin&_signature=67c50571323b9b2431f5b7fec9b22fda05d0bcc7"
 @newFile1 = "assets/images/cameras/snapshot1_new.jpeg"
 @oldFile1 = "assets/images/cameras/snapshot1_old.jpeg"
 
