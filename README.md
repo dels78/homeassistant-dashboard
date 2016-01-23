@@ -1,21 +1,24 @@
-# Touch-based Dashboard for OpenHAB
+# Touch-based Dashboard for Home-Assistant
 
-![Image of openHAB Dashboard](https://github.com/smar000/openhab-dashboard/blob/master/tmp/image.jpg)
+![Image of Home-Assistant Dashboard](https://github.com/dels/homeassistant-dashboard/blob/master/tmp/image.jpg)
 
-This is a dashing (http://dashing.io/) based dashboard interface for OpenHAB (http://www.openhab.org), a superb open source home automation system.  It is a fork from FlorianZ's SmartThings dashboard (https://github.com/FlorianZ/hadashboard), basically replacing the SmartThings related calls to OpenHAB equivalents/work-arounds. For those interested, there is a great discussion on the SmartThings forum (link available in FlorianZ's github repo).
+This is a dashing (http://dashing.io/) based dashboard interface for Home-Assistant (http://home-assistant.io), an amazing open source home automation system. It is a fork from smar000's OpenHAB dashboard https://github.com/smar000/openhab-dashboard, which is a fork from FlorianZ's SmartThings dashboard (https://github.com/FlorianZ/hadashboard), basically replacing the SmartThings related calls to OpenHAB equivalents/work-arounds. For those interested, there is a great discussion on the SmartThings forum (link available in FlorianZ's github repo).
 
-I have it running on wall-mounted Nexus 7's, providing a much easier UI for users in my home with quick access to the most commonly used items.
+I am humbly hacking it so it becomes compatible with Home-Assistant and hope that I will get it to the same level of awesomeness as the two gents who I am forking from.
+
+The goal is to have it running on wall-mounted Android or iOS tablets, providing a much easier UI for users in my home with quick access to the most commonly used items.
 
 As I have never coded in Ruby and had never heard of *Batman.js* before this, the work here is for the most part a 'hatchet' job, but is at a point that it works for me. There is most certainly room for it to be tidied up and made more efficient!
 
-When going through the installation details below, you may notice that I am not using server side push using the REST API on openHAB, but instead am using a rule within openHAB to trigger on changes in the underlying item states which then uses dashing's REST api to post data to the relevant dashing widget. The reason for this is because I could only get server side push to work for site-maps, and not for individual items or groups of items. This wasn't ideal for me, as I didn't want to have to keep adding items to site-maps just so they update to the dashing dashboard (plus it seems as if openHAB 2 will be moving to SSE's - thus there isn't enough incentive to spend the time on this further as it is working reliably for now). 
-
-You may also note that there is a CCTV related dashboard/widgets in the repository. This has nothing to do with openHAB and is a seperate system we use in our home. I have left it in as an example in case anyone is interested.
+You may also note that there is a CCTV related dashboard/widgets in the repository. This has nothing to do with Home-Assistant and is a seperate system (motionEye) we use in our home. I have left it in as an example in case anyone is interested.
 
 # Installation
-I'm assuming you know the basics of linux and are comfortable with simple installations etc. Everything here has been installed and is in daily use on an Ubuntu 14.10 server.
+I'm assuming you know the basics of linux and are comfortable with simple installations etc. Everything here has been installed and is in daily use on a Raspberry Pi 2 Raspbian Jessie server.
 
 1. Install dashing (http://dashing.io) along with any related components it needs (it should do these automatically if you follow the instructions on their website, although some manual configuration may be necessary depending on what system you are running on and what you already have installed)
+
+
+##This is where I got so far :)
 
 2. Clone or download this dashboard repository into a local folder, e.g. */opt/dashboard*
 
