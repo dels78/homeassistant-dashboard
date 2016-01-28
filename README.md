@@ -1,3 +1,5 @@
+## This is a plan, not a functional product, do not use!
+
 # Touch-based Dashboard for Home-Assistant
 
 ![Image of Home-Assistant Dashboard](https://github.com/dels/homeassistant-dashboard/blob/master/tmp/image.jpg)
